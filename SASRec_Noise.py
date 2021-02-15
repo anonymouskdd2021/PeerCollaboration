@@ -138,7 +138,7 @@ def cooperation_noise(model, epoch):
             threshold = np.percentile(np.array(list(u.cpu().data.abs().numpy().flatten())), args.percent)
             invalid_inds = (u.data.abs() < threshold).float()
             noise_information = torch.Tensor(u.size()).normal_(0, math.pow(args.rate, epoch // args.T + 1)).cuda()
-            model_cooperationt[key] = u + noise_information * invalid_inds
+            model_cooperation[key] = u + noise_information * invalid_inds
             continue
         model_cooperation[key] = u
 

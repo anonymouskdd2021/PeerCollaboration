@@ -4,7 +4,7 @@
 ## Layer-wise cooperation
 Execute example:  
 ```
-CUDA_VISIBLE_DEVICES=0 python3 -u SASRec_layercooperation.py --datapath ml20m_removecold5_seq.csv --savedir ml20m/ --max_len 100 --num 2 --i 1 --a 30 --seed 10 --cos --difflr --cooperation_type 'cooperation_type' > 1.log & CUDA_VISIBLE_DEVICES=1 python3 -u SASRec_layercooperation.py --datapath ml20m_removecold5_seq.csv --savedir ml20m/ --max_len 100 --num 2 --i 2 --a 30 --seed 11 --cos --difflr --cooperation_type 'cooperation_type' > 2.log  
+CUDA_VISIBLE_DEVICES=0 python3 -u SASRec_LW.py --datapath ml20m_removecold5_seq.csv --savedir ml20m/ --max_len 100 --num 2 --i 1 --a 30 --seed 10 --cos --difflr --cooperation_type 'cooperation_type' > 1.log & CUDA_VISIBLE_DEVICES=1 python3 -u SASRec_LW.py --datapath ml20m_removecold5_seq.csv --savedir ml20m/ --max_len 100 --num 2 --i 2 --a 30 --seed 11 --cos --difflr --cooperation_type 'cooperation_type' > 2.log  
 ```
 
 The import configuration:  
@@ -21,7 +21,7 @@ onlyfinal： Only the final layer uses layer-wise cooperation with entropy crite
 ## Parameter-wise cooperation  
 Execute example:  
 ```
-CUDA_VISIBLE_DEVICES=0 python3 -u SASRec_singleweight.py --datapath ml20m_removecold5_seq.csv --savedir ml20m/ --max_len 100 --num 2 --i 1 --percent 50 --seed 10 --cos --difflr > 1.log & CUDA_VISIBLE_DEVICES=1 python3 -u SASRec_singleweight.py --datapath ml20m_removecold5_seq.csv --savedir ml20m/ --max_len 100 --num 2 --i 2 --percent 50 --seed 11 --cos --difflr > 2.log  
+CUDA_VISIBLE_DEVICES=0 python3 -u SASRec_PW.py --datapath ml20m_removecold5_seq.csv --savedir ml20m/ --max_len 100 --num 2 --i 1 --percent 50 --seed 10 --cos --difflr > 1.log & CUDA_VISIBLE_DEVICES=1 python3 -u SASRec_PW.py --datapath ml20m_removecold5_seq.csv --savedir ml20m/ --max_len 100 --num 2 --i 2 --percent 50 --seed 11 --cos --difflr > 2.log  
 ```
 
 

@@ -25,7 +25,7 @@ CUDA_VISIBLE_DEVICES=0 python3 -u SASRec_PW.py --datapath ml20m_removecold5_seq.
 ```
 
 
-you can download a large sequential dataset of movielen-20m that has been pre-processed: https://drive.google.com/file/d/1AlzZyjTsceayYvSvUJL37J-5jtwOclpi/view?usp=sharing
+you can download a large sequential dataset of movielen-20m that has been pre-processed: https://drive.google.com/drive/folders/1TYtwwQruNcdDPQymsEgNRraXtjMf9jdl?usp=sharing
 
 # References
 https://github.com/kang205/SASRec code
